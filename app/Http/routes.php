@@ -29,3 +29,7 @@ Route::get('/', function () {
 Route::group(['middleware' => ['web']], function () {
     //
 });
+
+Route::post('/api/document', 'DocumentsController@storeDocument')->name('storeDocument');
+Route::get('/api/document', 'DocumentsController@listDocuments')->name('listDocuments');
+Route::get('/api/document/google', 'DocumentsController@getFileListFromGoogleDrive')->name('getGoogleDocs');

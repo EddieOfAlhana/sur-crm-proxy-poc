@@ -64,10 +64,19 @@ return [
 
         's3' => [
             'driver' => 's3',
-            'key'    => 'your-key',
-            'secret' => 'your-secret',
-            'region' => 'your-region',
-            'bucket' => 'your-bucket',
+            'key'    => env('AWS_KEY'),
+            'secret' => env('AWS_SECRET'),
+            'region' => 'eu-west-1',
+            'bucket' => 'sur-crm-test',
+        ],
+
+        'google' => [
+            'driver'   => 's3',
+            'key'      => '633495993622-5hl8iv8ege555i6c38ff7o7d7ijg9q9b.apps.googleusercontent.com',
+            'secret'   => '3mVd577XxSEPmcbp4hymF3UH',
+            'bucket'   => 'sur-crm-test',
+            'region'   => 'eu-west-1',
+            'base_url' =>'https://storage.googleapis.com'
         ],
 
         'rackspace' => [
